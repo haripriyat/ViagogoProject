@@ -1,0 +1,22 @@
+The main class that must be run is the Test.java
+
+There are some following assumptions that were made in writing this code as some of the requirements did not answer everything. Also there are some points below to show how to change the code if needed.
+
+1. The number of random points that we generate is going to be 10. You can always change this by changing the last parameter of the randomPointGenerator.
+
+2. The maximum number of tickets available at an event are going to be at max 9 and the price of a ticket at max is going to be $99. These can be changed by changing the parameters of generateSeedData method.
+
+3. Another thing that is hardcoded based on the requirements is the number of closest events to be printed in the output. This has been hardcoded to the value of 5 because currently the requirement is to print 5. However this could be changed by changing the limit variable in the main method.
+
+4.Currently distance is being calculated using the Manhattan distance formula as per the requirement however we can always plug in a different formula by just introducing another method for calculating the distance(probably using the Euclidean formula).
+
+5. There are some commented out lines in the Test.java as shown below. These can be uncommented to see the random seed data that is getting generated.
+
+		// System.out.println(Arrays.toString(points));
+		// System.out.println(events);
+
+6. The events are being numbered from 1 to 10 in a normal fashion because the points they get assigned to and the other data is anyways random.
+
+Incase I need to change the program to handle multiple events at the same point then I would have to change my seed data from the current Map<Point, Event> to Map<Point, List<Event>>
+
+Incase I need to make my program work for a much larger word instead of just the current -10 to 10 on bot
